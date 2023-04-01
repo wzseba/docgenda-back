@@ -17,7 +17,7 @@ export const Paciente = sequelize.define('pacientes',{
         allowNull: false
       },
     telefono:{
-        type: DataTypes.INTEGER,
+        type: DataTypes.BIGINT,
         allowNull: false
       },
     sintomas:{

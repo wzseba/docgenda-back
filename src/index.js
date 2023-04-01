@@ -7,8 +7,8 @@ const {PORT} = process.env;
 async function main(){
     try {
         await sequelize.sync({force: true});
-        app.listen(3001);
-        console.log('server on port 3001');
+        app.listen(`${PORT}`);
+        console.log(`server on port ${PORT}`);
     } catch (error) {
         console.error('todo mal', error)
     }
