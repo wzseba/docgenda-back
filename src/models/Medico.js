@@ -1,7 +1,7 @@
 import { DataTypes } from "sequelize";  
-import { sequelize } from "../database/database";
+import { sequelize } from "../database/database.js";
 
-export const medico = sequelize.define('Medicos',{
+export const Medico = sequelize.define('medicos',{
     id:{
         type: DataTypes.UUID,
         defaultValue: DataTypes.UUIDV4,
@@ -13,6 +13,10 @@ export const medico = sequelize.define('Medicos',{
         unique: true
     },
     espcilidad: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    password: {
         type: DataTypes.STRING,
         allowNull: false
     }
